@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+}
