@@ -1,7 +1,33 @@
 # face_recognition
+The general pipeline of the app is as follows:
+
+User Uploads Image: The user uploads an image via the web interface.
+
+Image Preprocessing: The uploaded image is saved temporarily.
+
+Face Detection (YOLO):
+
+The image is passed through the YOLO object detection model to detect faces.
+
+Bounding boxes around the faces are extracted.
+
+Face Recognition:
+
+Each detected face is passed to a face recognition model.
+
+The model compares detected faces to known faces.
+
+The name of the recognized person is returned (or "Unknown" if not recognized)
+
+Annotation & Display:
+
+The original image is annotated with bounding boxes and the names/labels.
+
+The annotated image is displayed in the web browser.
+
 face_recognition usig opencv and yolo
 
- How to Run:
+##How to Run:
 
 Ensure you have all the requirements pip install -r requirements.txt
 
@@ -11,9 +37,9 @@ Create a faces dir mkdir data/faces inside the face_recognition_app folder (this
 
 Add folders with the name of each individual to the data/faces dir. Inside of those directories, add the images to train from.
 
-Run the app: python app.py
+***Run the app:*** python app.py
 
-Open your browser and go to http://127.0.0.1:5000/
+Open your browser and go to **http://127.0.0.1:5000/**
 
 Important Notes and Enhancements:
 
@@ -25,14 +51,14 @@ in the specified data/faces directory, following the directory structure describ
 This is not implemented in the code for brevity, but you can add a training script (see face_recognition.py). 
 You will likely need a lot of high-quality face images of different people, including different angles and lightning.
 
-YOLO Improvements:
+**YOLO Improvements:**
 
 You can tune confidence and Non-Maximum Suppression (NMS) thresholds in the face_detection.py.
 
 YOLO is not specifically trained for face detection. Consider using a dedicated face detector for better performance 
 like cv2.CascadeClassifier as an alternative to yolo.
 
-Face Recognition Improvements:
+_Face Recognition Improvements:_
 
 You can use pre-trained models for better recognition.
 
